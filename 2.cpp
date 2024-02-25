@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-float PI=3.147;
+float PI = 3.147;
 struct Shape
 {
     float area;
@@ -40,11 +40,11 @@ struct tringle : public Shape
 
     void setBredth(float b)
     {
-        this->b=b;
+        this->b = b;
     }
     void setHeight(float h)
     {
-        this->h=h;
+        this->h = h;
     }
     float getBredth()
     {
@@ -56,36 +56,45 @@ struct tringle : public Shape
     }
 
     tringle()
-    {`
-        this->b=0;
-        this->h=0;
-    }
-    tringle(float b,float h)
     {
-        this->b=b;
-        this->h=h;
+        this->b = 0;
+        this->h = 0;
+    }
+    tringle(float b, float h)
+    {
+        this->b = b;
+        this->h = h;
     }
     void display()
     {
-        cout<<"\nBredth  = "<<this->b;
-        cout<<"\nHeigth  = "<<this->h;
+        cout << "\nBredth  = " << this->b;
+        cout << "\nHeigth  = " << this->h;
     }
     float calculateArea()
     {
-        return this->b*this->h;
+        return this->b * this->h;
     }
 };
 struct rectangle : public Shape
 {
     float l, w;
-
+    rectangle()
+    {
+        this->l = 0;
+        this->w = 0;
+    }
+    rectangle(float l, float w)
+    {
+        this->l = l;
+        this->w = w;
+    }
     void setLength(float l)
     {
-        this->l=l;
+        this->l = l;
     }
     void setWidth(float w)
     {
-        this->w=w;
+        this->w = w;
     }
     float getLength()
     {
@@ -95,35 +104,30 @@ struct rectangle : public Shape
     {
         return this->w;
     }
-    rectangle()
-    {
-        this->l=0;
-        this->w=0;
-    }
-    rectangle(float l,float w)
-    {
-        this->l=l;
-        this->w=w;
-    }
+
     void display()
     {
-        cout<<"\nLenth  = "<<l;
-        cout<<"\nWidth  = "<<w;
+        cout << "\nLenth  = " << l;
+        cout << "\nWidth  = " << w;
     }
     float calculateArea()
     {
-        area =  2*l*w;
+        area = 2 * l * w;
         return area;
     }
 };
 int main()
 {
     circle c1(56);
-    rectangle r1(10,20);
-    tringle(30,40);
+    rectangle r1(10, 20);
+    tringle t1(30, 40);
 
     c1.display();
-    cout<<"\nArea of Circle = "<<c1.calculateArea();
-    
-
+    cout << "\nArea of Circle = " << c1.calculateArea();
+    cout << "\n";
+    r1.display();
+    cout << "\nArea of Rectangle = " << r1.calculateArea();
+    cout << "\n";
+    t1.display();
+    cout << "\nArea of Tringle = " << t1.calculateArea();
 }

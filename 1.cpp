@@ -197,6 +197,7 @@ int main()
    a1.display();
 
    cout<<s1.calculateSalary();
+   cout<<"\nTotal Salary = "<<h1.calculateSalary();
 
 
 }
