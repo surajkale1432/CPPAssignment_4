@@ -72,7 +72,7 @@ struct tringle : public Shape
     }
     float calculateArea()
     {
-        return this->b * this->h;
+        return this->area= this->b * this->h;
     }
 };
 struct rectangle : public Shape
@@ -112,7 +112,7 @@ struct rectangle : public Shape
     }
     float calculateArea()
     {
-        area = 2 * l * w;
+        this->area = 2 * l * w;
         return area;
     }
 };
